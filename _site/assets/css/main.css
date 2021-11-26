@@ -364,7 +364,9 @@ body { background-attachment: fixed; background-color: #6e07f1; background-image
 
 h2.post-title, h2.page-title { font-size: 2rem; }
 
-p { text-align: justify; word-spacing: normal; }
+.content { text-align: justify; word-spacing: normal; }
+
+.post { text-align: justify; word-spacing: normal; }
 
 .post-tags a { font-size: 0.8em; margin-right: 0.5rem; opacity: 0.75; white-space: nowrap; }
 
