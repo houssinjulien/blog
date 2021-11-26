@@ -1,9 +1,11 @@
 <div class="post-meta">
-  <span class="post-date">{{ include.post.date | date: "%-d %B %Y" }}</span>
+  <span class="post-date"> {% include date.html date=page.date %}</span>
   <span class="post-categories">
     {% for category in include.post.categories %}
+  <span class="author">
+    {% if page.author %} écrit par {{page.author}}{% endif %}
       &bull;
-      {% include date.html date=page.date %}
+      
       {% comment %}
         Check if this category has a corresponding page before decide
         to link to it. This is an O(n^2) operations so consider removing

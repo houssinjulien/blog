@@ -2,7 +2,8 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2021-11-14 12:54:07 +0100
-categories: jekyll update
+categories: "eBullescence"
+author: "Julien HOUSSIN"
 ---
 
 Version HOUSSINJULIEN.github pour voir, Un petit changement pour voir ce que cela donne.c
