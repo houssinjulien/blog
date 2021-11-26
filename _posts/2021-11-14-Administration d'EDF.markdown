@@ -16,7 +16,7 @@ Pendant le confinement le prix spot du MWh a oscillé essentiellement entre 10 e
 
 Le gouvernement a annoncé en septembre une **réponse financière** à l'impact économique de la pandémie. Il y a un enjeu fort pour EDF de sécuriser les financements issus du **plan de relance** et il est aussi important de commencer les travaux le plus rapidement possible afin de réduire le risque de leur d'annulation.
 
-**Les filiales** du groupe EDF sont elles aussi **impactées positivement **par le plan de relance. IZI et DALKIA vont profiter du financement à destination de la rénovation énergétique de bâtiments qu'ils soient tertiaires ou d'habitations.
+**Les filiales** du groupe EDF sont elles aussi **impactées positivement** par le plan de relance. IZI et DALKIA vont profiter du financement à destination de la rénovation énergétique de bâtiments qu'ils soient tertiaires ou d'habitations.
 
 Le parlement Européen ambitionne que **l'Europe** soit le **premier continent neutre** en émission de **CO<sub>2</sub>** dès 2050. Pour cela il souhaite développer un standard d'obligation verte et a constitué un groupe d'experts devant l'assister sur la taxonomie. Il s'agit des critères techniques de sélection ayant pour but de déterminer les **activités** économiquement **durables** au sein desquels il y a l'énergie.
 

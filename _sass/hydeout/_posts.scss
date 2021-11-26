@@ -24,6 +24,11 @@ h2.page-title {
   font-size: 2rem;
 }
 
+p {
+  text-align: justify;
+  word-spacing: normal;
+}
+
 .post-tags a {
   font-size: 0.8em;
   margin-right: 0.5rem;
@@ -78,7 +83,8 @@ article + *,
 // Meta data line below post title
 .post-meta {
   color: $body-muted;
-  margin-bottom: 1rem;
+  font-size: 75%;
+  margin-bottom: 2rem;
   margin-top: -0.5rem;
 }
 

@@ -39,7 +39,7 @@ button:hover, input[type='submit']:hover { background: #6e07f1; border-color: #6
 
 .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-h1, h2, h3, h4, h5, h6, .site-title { color: #313131; font-weight: 600; line-height: 1.25; margin-bottom: 0.5rem; text-rendering: optimizeLegibility; }
+h1, h2, h3, h4, h5, h6, .site-title { color: #6e07f1; font-weight: 600; line-height: 1.25; margin-bottom: 0.5rem; text-rendering: optimizeLegibility; }
 
 h1 { font-size: 2rem; }
 
@@ -274,24 +274,30 @@ pre code { background-color: transparent; color: inherit; font-size: 100%; paddi
 .highlight .lineno { color: #999; display: inline-block; padding-left: 0.25rem; padding-right: 0.75rem; user-select: none; }
 
 /* Layout Styles for managing the structural hierarchy of the site. Hydeout features the large colored sidebar from Hyde that houses the site name, intro, and "footer" content. Sidebar is on top of content on mobile and expands into sidebar on larger width displays. Sidebar CSS assumes HTML looks like this for post pages: body > #sidebar > header (primary sidebar content -- i.e. title) > h1 (home page only, otherwise div or span) > secondary nav content we may want to hide on certain pages > .container > h1 (non-home page) > .content Basic approach is to color in body, make sidebar background transparent, and then fill in the .container or .content elements depending on how far we want the sidebar or header to stretch. */
-body { background-attachment: fixed; background-color: #6e07f1; background-image: linear-gradient(to bottom, #8123f9, #5e06ce); color: rgba(255, 255, 255, 0.75); display: flex; flex-direction: column; min-height: 100vh; }
+body { background-attachment: fixed; background-color: #6e07f1; background-image: linear-gradient(to bottom, #8123f9, #5e06ce); color: rgba(255, 255, 255, 0.75); display: flex; flex-direction: column; min-height: 100vh; overflow-y: scroll; }
 
-#sidebar { flex: 0 0 auto; padding: 2rem; }
+*::-webkit-scrollbar { width: 6px; }
+
+*::-webkit-scrollbar-track { background: white; }
+
+*::-webkit-scrollbar-thumb { background-color: #6e07f1; border-radius: 20px; }
+
+#sidebar { flex: 0 0 auto; padding: 1rem; }
 
 #sidebar .site-title { font-family: 'Abril Fatface', serif; font-size: 1.25rem; font-weight: normal; margin-bottom: 0.5rem; margin-top: 0; }
 
 #sidebar .site-title .back-arrow { margin-right: 0.5rem; }
 
-.content { background: #fff; color: #515151; padding: 2rem; }
+.content { background: #fff; color: #515151; padding: 1rem; }
 
 .container { display: flex; flex: 1 1 auto; flex-direction: column; }
 
-.container > .content { flex-grow: 1; padding-bottom: 4rem; }
+.container > .content { flex-grow: 1; padding-bottom: 2rem; }
 
 /* ----------------------------------------------------------- Mobile view ----------------------------------------------------------- */
 #sidebar header ~ *, #sidebar header ~ nav, #sidebar p.lead { display: none; }
 
-.container > header { background: transparent; color: #fff; margin: -1.5rem 2rem 2rem; }
+.container > header { background: transparent; color: #fff; margin: -0.5rem 1rem 1rem; }
 
 .container > header h1, .container > header h2 { color: inherit; }
 
@@ -309,7 +315,7 @@ body { background-attachment: fixed; background-color: #6e07f1; background-image
 .home #sidebar > *:last-child { margin-bottom: 0.5rem; }
 
 /* ----------------------------------------------------------- Tablet / Desktop view ----------------------------------------------------------- */
-@media (min-width: 49rem) { body { flex-direction: row; min-height: 100vh; -webkit-overflow-scrolling: touch; overflow-y: auto; } body > * { -webkit-overflow-scrolling: touch; overflow-y: auto; } /* Undo mobile CSS */ #sidebar, .home #sidebar { text-align: left; width: 18rem; } #sidebar > *:last-child, .home #sidebar > *:last-child { margin-bottom: 0; } #sidebar { position: fixed; bottom: 0; left: 0; } #sidebar .site-title { font-size: 3.25rem; } #sidebar .site-title .back-arrow { display: none; } #sidebar p.lead, #sidebar header ~ * { display: block; } #sidebar header ~ nav { display: flex; } .index #sidebar { margin-bottom: 0; } .container { background: #fff; color: #515151; min-height: 100vh; padding: 4rem 4rem 0; margin-left: 18rem; } .container > header { color: #313131; margin: 0; } .container > header h1, .container > header h2 { color: inherit; } .container > header h1:last-child, .container > header h2:last-child { margin-bottom: 0.5rem; } .container > * { max-width: 38rem; padding: 0; } }
+@media (min-width: 49rem) { body { flex-direction: row; min-height: 100vh; -webkit-overflow-scrolling: touch; overflow-y: auto; } body > * { -webkit-overflow-scrolling: touch; overflow-y: auto; } /* Undo mobile CSS */ #sidebar, .home #sidebar { text-align: left; width: 18rem; } #sidebar > *:last-child, .home #sidebar > *:last-child { margin-bottom: 0; } #sidebar { position: fixed; bottom: 0; left: 0; } #sidebar .site-title { font-size: 3.25rem; } #sidebar .site-title .back-arrow { display: none; } #sidebar p.lead, #sidebar header ~ * { display: block; } #sidebar header ~ nav { display: flex; } .index #sidebar { margin-bottom: 0; } .container { background: #fff; color: #515151; min-height: 100vh; padding: 2rem 2rem 0; margin-left: 18rem; } .container > header { color: #6e07f1; margin: 0; } .container > header h1, .container > header h2 { color: inherit; } .container > header h1:last-child, .container > header h2:last-child { margin-bottom: 0.5rem; } .container > * { max-width: 38rem; padding: 0; } }
 
 /* ----------------------------------------------------------- Sidebar links + nav ----------------------------------------------------------- */
 #sidebar a { color: #fff; }
@@ -354,9 +360,11 @@ body { background-attachment: fixed; background-color: #6e07f1; background-image
 
 .page-title, .post-title { margin-top: 0; }
 
-.page-title, .post-title, .post-title a { color: #313131; }
+.page-title, .post-title, .post-title a { color: #6e07f1; }
 
 h2.post-title, h2.page-title { font-size: 2rem; }
+
+p { text-align: justify; word-spacing: normal; }
 
 .post-tags a { font-size: 0.8em; margin-right: 0.5rem; opacity: 0.75; white-space: nowrap; }
 
@@ -374,32 +382,32 @@ h2.post-title, h2.page-title { font-size: 2rem; }
 
 .posts-list li a:hover small { color: inherit; }
 
-article + *, .post-body ~ section { border-top: 1px solid #e5e5e5; margin-top: 2rem; padding-top: 2rem; }
+article + *, .post-body ~ section { border-top: 1px solid #e5e5e5; margin-top: 1rem; padding-top: 1rem; }
 
 article + * > h2:first-child, article + * > h3:first-child, .post-body ~ section > h2:first-child, .post-body ~ section > h3:first-child { margin-top: 0; }
 
-.post-meta { color: #767676; margin-bottom: 1rem; margin-top: -0.5rem; }
+.post-meta { color: #767676; font-size: 75%; margin-bottom: 2rem; margin-top: -0.5rem; }
 
 .post .content li + li, .page .content li + li { margin-top: 0.25rem; }
 
 button.disqus-load { margin-top: 1em; }
 
 /* Pagination Super lightweight (HTML-wise) blog pagination. Should only be visible when there is navigation available -- single buttons at top or bottom of each page. */
-.pagination { color: #ccc; margin-bottom: 2rem; text-align: center; }
+.pagination { color: #ccc; margin-bottom: 1rem; text-align: center; }
 
 .pagination > a { background: #fff; border: solid #e5e5e5; border-radius: 300px; border-width: 1px; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16); display: inline-block; max-width: 18rem; padding: 1em 1.5em; width: 60%; }
 
 .pagination > a:hover { background-color: #e5e5e5; }
 
-* + .pagination { margin-top: 2rem; }
+* + .pagination { margin-top: 1rem; }
 
-.content .pagination:first-child { margin-top: -4rem; }
+.content .pagination:first-child { margin-top: -2rem; }
 
-.index #sidebar { padding-bottom: calc(2rem + 1em); }
+.index #sidebar { padding-bottom: calc(1rem + 1em); }
 
-.home.index #sidebar { padding-bottom: 2rem; }
+.home.index #sidebar { padding-bottom: 1rem; }
 
-@media (min-width: 49rem) { .pagination > a { box-shadow: none; } .pagination > a:hover { box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16); } .content .pagination:first-child { margin-top: 0; } .content .pagination:first-child + * { border-top: 1px solid #e5e5e5; margin-top: 2rem; padding-top: 2rem; } .index #sidebar { padding-bottom: 2rem; } }
+@media (min-width: 49rem) { .pagination > a { box-shadow: none; } .pagination > a:hover { box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16); } .content .pagination:first-child { margin-top: 0; } .content .pagination:first-child + * { border-top: 1px solid #e5e5e5; margin-top: 1rem; padding-top: 1rem; } .index #sidebar { padding-bottom: 1rem; } }
 
 .message { background-color: #f9f9f9; color: #717171; margin-bottom: 1rem; padding: 1rem; }
 
